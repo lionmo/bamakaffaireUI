@@ -1,0 +1,45 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)"
+      [ngClass]="{hidden: !(isHandset$ | async)}">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="/accueil">Accueil</a>
+      <a mat-list-item href="/categories">Annonces par Catégorie</a>
+      <a mat-list-item href="/publiez-annonce">Publiez Annonce</a>
+      <a mat-list-item href="/nous-contacter">Nous COntacter</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Logo here</span>
+
+   <!-- This fills the remaining space of the current row -->
+   <span class="fill-space"></span>
+
+   <span [ngClass]="{hidden: (isHandset$ | async)}">
+     <button mat-button color="primary" routerLink="/accueil" routerLinkActive="active">Accueil</button>
+     <button mat-button color="primary" routerLink="/categories" routerLinkActive="active">Annonces par Catégorie</button>
+     <button mat-button color="primary" routerLink="/publiez-annonces" routerLinkActive="active">Publiez Annonce</button>
+     <button mat-button color="primary" routerLink="/nous-contacter" routerLinkActive="active">Nous Contacter</button>
+   </span>
+
+   <span class="fill-space"></span>
+
+   <button mat-button color="primary" routerLink="/login" routerLinkActive="active" [ngClass]="{hidden: (isHandset$ | async)}">Se connecter</button>
+
+    </mat-toolbar>
+    <ng-content></ng-content>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
