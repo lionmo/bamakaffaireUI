@@ -26,8 +26,8 @@ export class CategoriesComponent implements OnInit {
               'immobilier',
               sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/immobilier.svg'));
               iconRegistry.addSvgIcon(
-                'service',
-                sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/service.svg'));
+                'services',
+                sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/services.svg'));
                 iconRegistry.addSvgIcon(
                   'materiels',
                   sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/materiels.svg'));
