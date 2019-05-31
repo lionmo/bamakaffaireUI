@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
+import {MatIconRegistry} from '@angular/material/icon';
 
 @Component({
   selector: 'app-categories',
@@ -7,7 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      'vehicule',
+      sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/vehicule.svg'));
+      iconRegistry.addSvgIcon(
+        'clothes',
+        sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/clothes.svg'));
+        iconRegistry.addSvgIcon(
+          'sport',
+          sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/sport.svg'));
+          iconRegistry.addSvgIcon(
+            'art',
+            sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/art.svg'));
+            iconRegistry.addSvgIcon(
+              'immobilier',
+              sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/immobilier.svg'));
+              iconRegistry.addSvgIcon(
+                'service',
+                sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/service.svg'));
+                iconRegistry.addSvgIcon(
+                  'materiels',
+                  sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/materiels.svg'));
+                  iconRegistry.addSvgIcon(
+                    'job',
+                    sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/job.svg'));
+                    iconRegistry.addSvgIcon(
+                      'others',
+                      sanitizer.bypassSecurityTrustResourceUrl('../../assets/SVG/others.svg'));
+
+  }
 
   ngOnInit() {
   }

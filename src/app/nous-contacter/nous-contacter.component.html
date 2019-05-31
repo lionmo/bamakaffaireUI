@@ -1,3 +1,13 @@
-<p>
-  nous-contacter works!
-</p>
+<div class="container jumbotron">
+    <h1> Contactez-nous</h1>
+    <form class="form-group">
+        <input type="text" placeholder="Nom" class="form-control" [(ngModel)]="nom" name="nom" required> <br>
+         <input type="text" placeholder="Prenom"class="form-control" [(ngModel)]="prenom" name="prenom" required><br>
+        <input type="email" placeholder="Adresse email" class="form-control" [(ngModel)]="sujet" name="sujet" required><br>
+
+          Message:<br>
+          <textarea [(ngModel)]="message" name="message" id="" cols="30" rows="10" required></textarea><br>
+        <button type="submit" (click)="contacter()" class="btn btn-primary">Envoyez</button>
+
+    </form>
+  </div>

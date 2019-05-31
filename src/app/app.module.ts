@@ -18,10 +18,12 @@ import { CategoriesComponent } from './categories/categories.component';
 import { PubliezAnnonceComponent } from './publiez-annonce/publiez-annonce.component';
 import { NousContacterComponent } from './nous-contacter/nous-contacter.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'categories', component: CategoriesComponent },
   { path: 'nous-contacter', component: NousContacterComponent },
   { path: 'publiez-annonce', component: PubliezAnnonceComponent },
@@ -39,7 +41,8 @@ const appRoutes: Routes = [
     CategoriesComponent,
     PubliezAnnonceComponent,
     NousContacterComponent,
-    MainNavComponent
+    MainNavComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule, MatToolbarModule, BrowserAnimationsModule, MatButtonModule, MatCheckboxModule, ReactiveFormsModule, RouterModule.forRoot(

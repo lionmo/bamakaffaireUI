@@ -3,13 +3,14 @@
   <form class="form-group">
     <div class="form-group">
       <label for="email-tel">Adresse email ou telephone</label><br><br>
-      <input type="text" class="form-control" [(ngModel)]="emailTel" name="emailTel" require><br><br>
+      <input type="text" class="form-control" [(ngModel)]="emailTel" name="emailTel" required><br><br>
     </div>
     <div class="form-group">
         <label for="password">Mot de passe</label><br><br>
-        <input type="password" class="form-control" [(ngModel)]="password" name="password" require>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" required>
       </div><br>
       <button type="submit" (click)="login()" class="btn btn-primary">Se connecter</button>
 
   </form>
+  <span>Vous n'avez pas de compte? Veuillez vous inscrire <a href="/register">ici</a></span>
 </div>

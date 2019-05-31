@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nous-contacter.component.css']
 })
 export class NousContacterComponent implements OnInit {
+  nom: string;
+  prenom: string;
+  sujet: string;
+  message: any;
 
   constructor() { }
 
   ngOnInit() {
   }
+  contacter() {
 
+  }
 }
